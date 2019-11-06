@@ -1,8 +1,8 @@
-# bootstrap-react-redux-ssr-thirteen
+# universal-demo-fifteen-ts
 
 ## Overview:
 
-App builds off 'bootstrap-react-redux-webpack-ssr-thirteen and brrs-two-components'. 
+App is a continuation of fourteen and uses TypeScript.. 
 
 =============================================================
 =============================================================
