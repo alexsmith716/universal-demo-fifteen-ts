@@ -8,10 +8,12 @@ import { renderRoutes } from 'react-router-config';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import qs from 'qs';
 import { Link } from 'react-router-dom';
+
+import { Footer } from '../../components/Footer';
 import { InfoBar } from '../../components';
-import { Footer } from '../../components';
 import { ReadmeModal } from '../../components';
 import { FontsModal } from '../../components';
+
 import config from '../../../config/config';
 import { isLoaded as isInfoLoaded, load as loadInfo } from '../../redux/modules/info';
 
