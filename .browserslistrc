@@ -1,0 +1,20 @@
+# Run 'npx browserslist' in project directory to see what browsers selected
+
+> 1%
+not dead
+not ie <= 11
+not op_mini all
+current node
+
+# ---------------------------
+
+# ---------------------------
+# [production staging]
+# > 0.1%
+# not dead
+# not op_mini all
+
+# [development]
+# last 1 chrome version
+# last 1 firefox version
+# last 1 safari version
