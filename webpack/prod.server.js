@@ -50,22 +50,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.tsx?$/,
-        loader: [
-          'babel-loader',
-          {
-            loader: 'awesome-typescript-loader',
-            options: {
-              // useCache: true
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: [
+      //     'babel-loader',
+      //     {
+      //       loader: 'awesome-typescript-loader',
+      //       options: {
+      //         // useCache: true
+      //       },
+      //     },
+      //   ],
+      // },
       // {
       //   test: /\.tsx?$/,
       //   loader: 'awesome-typescript-loader',
