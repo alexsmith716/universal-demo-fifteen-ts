@@ -50,7 +50,7 @@ module.exports = {
     'react/jsx-wrap-multilines': 1,
     'react/jsx-boolean-value': 1,
     'react/no-array-index-key': 1,
-    'react/prop-types': 2
+    'react/prop-types': 0
   },
   "globals": {
     "__DEVELOPMENT__": true,
