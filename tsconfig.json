@@ -2,23 +2,23 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": false,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "outDir": "./build/",
     "jsx": "react",
-    "lib": ["DOM","ES6","DOM.Iterable","ScriptHost"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
+    "module": "commonjs",
     "noEmit": true,
+    "outDir": "./build/",
+    "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedParameters": true,
     "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
   },
   "include": [
@@ -26,5 +26,31 @@
   ],
   "exclude": [
     "node_modules/**"
-  ],
+  ]
 }
+
+// lib =============================:
+// library files to be included in compilation
+// Note: If --lib is not specified a default list of libraries are injected
+// The default libraries injected are:
+// ► For --target ES5: DOM,ES5,ScriptHost
+// ► For --target ES6: DOM,ES6,DOM.Iterable,ScriptHost
+
+// module =============================:
+// target === "ES3" or "ES5" ? "CommonJS" : "ES6"
+// Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext"
+// "ES6" and "ES2015" values may be used when targeting "ES5" or lower
+
+// target =============================:
+// specify ECMAScript target version
+// target those version features for the runtime
+// using target ES6 instructs compiler not to transform ES6-specific features
+// ► "ES3" (default)
+// ► "ES5"
+// ► "ES6"/"ES2015"
+// ► "ES2016"
+// ► "ES2017"
+// ► "ES2018"
+// ► "ES2019"
+// ► "ES2020"
+// ► "ESNext"
