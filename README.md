@@ -12,6 +12,7 @@ App is a continuation of fourteen and uses TypeScript..
 Will initially target ES6
  
 https://github.com/microsoft/TypeScript-Handbook
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
 #### compilerOptions:
 
@@ -86,4 +87,52 @@ Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescri
 `typescript` and `prop-types` serve different purposes:
 * 'Typescript' validates types at compile time
 * 'PropTypes' are checked at runtime
+
+#### =================================
+
+Babel disables type-checking
+Babel removes TypeScript code and turns it into JS
+
+https://github.com/s-panferov/awesome-typescript-loader
+https://github.com/TypeStrong/fork-ts-checker-webpack-plugin
+run typescript type checker on a separate process
+static type checking running in a separate process
+
+#### =================================
+
+https://iamturns.com/typescript-babel/
+https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5
+
+https://2ality.com/2019/10/babel-loader-typescript.html
+ts-loader has one downside: We can'’'t pipe the output of another loader into it; it always reads the original file
+As a work-around, use babel-loader to compile TypeScript
+
+https://github.com/TypeStrong/ts-loader/tree/master/examples/fork-ts-checker-webpack-plugin
+
+'@babel/preset-typescript': (TypeScript loader)
+
+https://medium.com/webpack/typescript-webpack-super-pursuit-mode-83cc568dea79
+
+'ts-loader': (TypeScript loader)
+  1) transpiles TypeScript into JavaScript and hands it off to webpack
+  2) collects any TypeScript compilation errors and reports them to webpack 
+
+'fork-ts-checker-webpack-plugin': (TypeScript checker)
+  1) transpiles TypeScript into JavaScript and hands it off to webpack
+    >>> forget about #2 above <<<<
+  2) It removes the responsibility for type checking from 'ts-loader', so 'ts-loader' can focus on transpilation
+    >>> it relieves 'ts-loader' from type-checking and runs it in a separate process
+
+#### =================================
+
+typescript: for using Typescript
+@babel/preset-typescript: for building Typescript by using babel / compile Typescript in babel
+ts-loader: for compiling Typescript in Webpack
+fork-ts-checker-webpack-plugin: for making ts-loader faster
+tslint, tslint-react: for checking code conventions
+
+
+https://github.com/TypeStrong/ts-loader
+https://github.com/Realytics/fork-ts-checker-webpack-plugin
+https://github.com/palantir/tslint-react
 
