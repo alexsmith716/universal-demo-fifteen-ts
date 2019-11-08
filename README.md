@@ -79,7 +79,7 @@ Babel   >>>>>>>> webpack > babel-loader > typescript loader (ATL)
 (combine 2 compilers > merge JS outputted from TS compile > pipe that JS output through Babel-loader > result is ES5 with Babel provided polyfills)
 
 METHOD 2:
-Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescript' > babel preset '@babel/typescript' > webpack 'test: /\.(js|ts)x?$/'
+Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescript' > webpack 'test: /\.(js|ts)x?$/'
 
 #### =================================
 
