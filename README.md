@@ -109,7 +109,7 @@ As a work-around, use babel-loader to compile TypeScript
 
 https://github.com/TypeStrong/ts-loader/tree/master/examples/fork-ts-checker-webpack-plugin
 
-'@babel/preset-typescript': (TypeScript loader)
+'@babel/preset-typescript': (TypeScript loader / compiling)
 
 https://medium.com/webpack/typescript-webpack-super-pursuit-mode-83cc568dea79
 
