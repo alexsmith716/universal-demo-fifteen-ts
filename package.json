@@ -15,10 +15,10 @@
     "clean:all": "npm-run-all --parallel clean clean:dlls",
     "clean": "rimraf build/dist build/server build/service-worker.js ./analyzers",
     "clean:dlls": "rimraf build/dlls  webpack/dlls",
-    "prettier": "prettier-eslint --write --eslint-config-path .eslintrc './+(bin)/**/*.js'",
+    "prettier": "prettier-eslint --write --eslint-config-path .eslintrc.js './+(bin)/**/*.js'",
     "lint": "eslint bin",
     "test": "NODE_PATH=src jest src",
-    "type-check": "tsc"
+    "type-check": "tsc --traceResolution"
   },
   "dependencies": {
     "@babel/register": "^7.7.0",
@@ -163,8 +163,8 @@
   },
   "lint-staged": {
     "+(bin)/**/*.js": [
-      "prettier-eslint --write --eslint-config-path .eslintrc",
-      "eslint -c .eslintrc",
+      "prettier-eslint --write --eslint-config-path .eslintrc.js",
+      "eslint -c .eslintrc.js",
       "git add"
     ]
   },

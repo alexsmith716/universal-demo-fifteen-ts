@@ -9,7 +9,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import qs from 'qs';
 import { Link } from 'react-router-dom';
 
-import { Footer } from '../../components/Footer';
+import { Footer } from '../../components';
 import { InfoBar } from '../../components';
 import { ReadmeModal } from '../../components';
 import { FontsModal } from '../../components';

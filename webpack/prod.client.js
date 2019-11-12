@@ -10,6 +10,7 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 // const CompressionPlugin = require('compression-webpack-plugin');
 // const BrotliPlugin = require('brotli-webpack-plugin');
@@ -280,6 +281,8 @@ module.exports = {
   plugins: [
 
     new WebpackBar({ name: 'Client' }),
+
+    new ForkTsCheckerWebpackPlugin(),
 
     new CopyPlugin([
       { from: path.resolve(buildPath, './favicon.ico'), to: assetPath },

@@ -89,6 +89,9 @@ Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescri
 * 'PropTypes' are checked at runtime
 
 #### =================================
+#### =================================
+
+typescript babel (ES6 > ES5)
 
 Babel disables type-checking
 Babel removes TypeScript code and turns it into JS
@@ -104,8 +107,9 @@ https://iamturns.com/typescript-babel/
 https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5
 
 https://2ality.com/2019/10/babel-loader-typescript.html
-ts-loader has one downside: We can'’'t pipe the output of another loader into it; it always reads the original file
-As a work-around, use babel-loader to compile TypeScript
+ts-loader has one downside: 
+* you can't pipe the output of another loader into it; it always reads the original file 
+as a work-around, use babel-loader to compile TypeScript
 
 https://github.com/TypeStrong/ts-loader/tree/master/examples/fork-ts-checker-webpack-plugin
 
