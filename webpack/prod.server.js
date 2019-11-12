@@ -6,6 +6,7 @@ const externals = require('./node-externals');
 const WebpackBar = require('webpackbar');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 // const { DuplicatesPlugin } = require('inspectpack/plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const rootPath = path.resolve(__dirname, '..');
 
@@ -211,6 +212,8 @@ module.exports = {
     new WebpackBar({ name: 'Server' }),
     // new webpack.ProgressPlugin(handler),
     // https://webpack.js.org/plugins/module-concatenation-plugin/
+
+    new ForkTsCheckerWebpackPlugin(),
 
     new webpack.optimize.ModuleConcatenationPlugin(),
 

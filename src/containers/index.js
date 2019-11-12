@@ -1,6 +1,5 @@
 export App from './App/App';
 export Home from './Home/Home';
-export NotFound from './NotFound/NotFound';
 
 export CodeSampleLocalStart from './codeSamples/CodeSampleLocalStart/CodeSampleLocalStart';
 export CodeSampleHerokuStart from './codeSamples/CodeSampleHerokuStart/CodeSampleHerokuStart';
@@ -22,3 +21,9 @@ export CodeSampleMockAPI from './codeSamples/CodeSampleMockAPI/CodeSampleMockAPI
 export CodeSampleTimeElapsedClass from './codeSamples/CodeSampleTimeElapsedClass/CodeSampleTimeElapsedClass';
 export CodeSampleTimeElapsedClassTwo from './codeSamples/CodeSampleTimeElapsedClassTwo/CodeSampleTimeElapsedClassTwo';
 export CodeSampleTimeElapsedModule from './codeSamples/CodeSampleTimeElapsedModule/CodeSampleTimeElapsedModule';
+
+import { NotFound } from './NotFound';;
+
+export {
+  NotFound
+};
