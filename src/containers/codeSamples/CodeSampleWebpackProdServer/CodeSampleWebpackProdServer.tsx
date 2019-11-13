@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleWebpackProdServer = () => {
+export const CodeSampleWebpackProdServer = () => {
 
   return (
 
@@ -247,5 +247,3 @@ module.exports = {
       </div>
   );
 };
-
-export default CodeSampleWebpackProdServer;

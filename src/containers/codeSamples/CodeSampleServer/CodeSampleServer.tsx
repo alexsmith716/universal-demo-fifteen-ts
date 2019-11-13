@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleServer = () => {
+export const CodeSampleServer = () => {
 
   return (
 
@@ -145,5 +145,3 @@ export default ({ clientStats }) => async (req, res) => {
       </div>
   );
 };
-
-export default CodeSampleServer;

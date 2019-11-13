@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleReduxCounter = () => {
+export const CodeSampleReduxCounterPreloaded = () => {
 
   return (
 
@@ -69,5 +69,3 @@ export function decrementPreloadedState() {
       </div>
   );
 };
-
-export default CodeSampleReduxCounter;

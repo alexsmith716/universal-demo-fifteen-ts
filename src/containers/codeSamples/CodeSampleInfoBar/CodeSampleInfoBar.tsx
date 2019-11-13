@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleInfoBar = () => {
+export const CodeSampleInfoBar = () => {
 
   return (
 
@@ -150,5 +150,3 @@ export default InfoBar;
       </div>
   );
 };
-
-export default CodeSampleInfoBar;

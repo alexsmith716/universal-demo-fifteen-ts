@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleAboutLoadable = () => {
+export const CodeSampleAboutLoadable = () => {
 
   return (
 
@@ -88,5 +88,3 @@ export default AboutLoadable;
       </div>
   );
 };
-
-export default CodeSampleAboutLoadable;

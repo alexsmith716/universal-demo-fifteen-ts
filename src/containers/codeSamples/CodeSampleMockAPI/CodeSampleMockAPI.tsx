@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleMockAPI = () => {
+export const CodeSampleMockAPI = () => {
 
   return (
 
@@ -351,5 +351,3 @@ export function mockAPI(doWhat, delay) {
       </div>
   );
 };
-
-export default CodeSampleMockAPI;
