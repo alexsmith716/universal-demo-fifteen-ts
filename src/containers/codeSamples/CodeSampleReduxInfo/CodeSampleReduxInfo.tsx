@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleReduxInfo = () => {
+export const CodeSampleReduxInfo = () => {
 
   return (
 
@@ -115,5 +115,3 @@ export function load() {
       </div>
   );
 };
-
-export default CodeSampleReduxInfo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleStylesGlobalScss = () => {
+export const CodeSampleStylesGlobalScss = () => {
 
   return (
 
@@ -160,5 +160,3 @@ $fa-var-facebook-square: \f082;
       </div>
   );
 };
-
-export default CodeSampleStylesGlobalScss;

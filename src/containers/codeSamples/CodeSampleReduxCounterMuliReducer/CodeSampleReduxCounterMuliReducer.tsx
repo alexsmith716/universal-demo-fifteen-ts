@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleReduxCounter = () => {
+export const CodeSampleReduxCounterMuliReducer = () => {
 
   return (
 
@@ -67,5 +67,3 @@ export function decrementMultireducer() {
       </div>
   );
 };
-
-export default CodeSampleReduxCounter;

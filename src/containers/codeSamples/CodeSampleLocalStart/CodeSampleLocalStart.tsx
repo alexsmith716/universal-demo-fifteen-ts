@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleLocalStart = () => {
+export const CodeSampleLocalStart = () => {
 
   return (
 
@@ -203,5 +203,3 @@ process.on('SIGTERM', m => {
       </div>
   );
 };
-
-export default CodeSampleLocalStart;

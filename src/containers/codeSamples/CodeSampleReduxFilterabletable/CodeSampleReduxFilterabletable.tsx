@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleReduxFilterabletable = () => {
+export const CodeSampleReduxFilterabletable = () => {
 
   return (
 
@@ -132,5 +132,3 @@ export function actionInStockChange(prop) {
       </div>
   );
 };
-
-export default CodeSampleReduxFilterabletable;

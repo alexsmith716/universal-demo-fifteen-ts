@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleTimeElapsedModule = () => {
+export const CodeSampleTimeElapsedModule = () => {
 
   return (
 
@@ -79,5 +79,3 @@ export default timeElapsedModule;
       </div>
   );
 };
-
-export default CodeSampleTimeElapsedModule;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CodeSampleHerokuStart = () => {
+export const CodeSampleHerokuStart = () => {
 
   return (
 
@@ -57,5 +57,3 @@ webpack([clientConfigProd, serverConfigProd]).run((err, stats) => {
       </div>
   );
 };
-
-export default CodeSampleHerokuStart;
