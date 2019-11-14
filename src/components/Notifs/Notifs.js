@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-
 @connect(
   (state, { as }) => ({ 
     notifs: state.notifs[as] || [] 
   })
 )
 
-
-class Notifs extends Component {
+export class Notifs extends Component {
 
   static propTypes = {
     notifs: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -33,5 +31,3 @@ class Notifs extends Component {
     );
   }
 }
-
-export default Notifs;

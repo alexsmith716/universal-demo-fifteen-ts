@@ -4,7 +4,7 @@ import { withRouter, Route } from 'react-router';
 
 @withRouter
 
-class RouterTrigger extends Component {
+export class RouterTrigger extends Component {
   
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -87,5 +87,3 @@ class RouterTrigger extends Component {
     return <Route location={previousLocation || location} render={() => children} />;
   }
 }
-
-export default RouterTrigger;

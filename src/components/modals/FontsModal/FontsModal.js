@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FontsModal = props => {
+export const FontsModal = props => {
 
   const { styles } = props;
 
@@ -54,5 +54,3 @@ const FontsModal = props => {
     </div>
   );
 };
-
-export default FontsModal;

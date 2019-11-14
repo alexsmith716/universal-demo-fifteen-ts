@@ -33,7 +33,7 @@ import { isLoaded as isInfoLoaded, load as loadInfo } from '../../redux/modules/
 
 @withRouter
 
-class App extends Component {
+export class App extends Component {
 
   static propTypes = {
     route: PropTypes.objectOf(PropTypes.any).isRequired,
@@ -216,5 +216,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
