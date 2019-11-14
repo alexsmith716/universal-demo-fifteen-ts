@@ -251,7 +251,7 @@ class FilterableTable extends Component {
     const loadingText = 'Fetching Requested Data ...';
     let items = null;
 
-    let arrayLike = data && data.length > 0 ? arrayLike = true : arrayLike = null;
+    let arrayLike = data && data.length > 0 ? true : null;
 
     if (data && (dropDownOptionSelected.indexOf('https') === 0 || dropDownOptionSelected.indexOf('http') === 0)) {
 
