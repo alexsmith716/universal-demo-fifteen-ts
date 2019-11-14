@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReadmeModal = () => {
+export const ReadmeModal = () => {
 
   const styles = require('./ReadmeModal.scss');
 
@@ -262,5 +262,3 @@ const ReadmeModal = () => {
     </div>
   );
 };
-
-export default ReadmeModal;

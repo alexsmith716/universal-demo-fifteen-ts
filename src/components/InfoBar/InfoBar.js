@@ -13,7 +13,7 @@ import Loading from '../Loading/Loading';
   { load }
 )
 
-class InfoBar extends Component {
+export class InfoBar extends Component {
 
   state = { prevProps: this.props };
 
@@ -69,5 +69,3 @@ class InfoBar extends Component {
     );
   }
 }
-
-export default InfoBar;

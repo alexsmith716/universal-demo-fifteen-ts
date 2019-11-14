@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 
-class Home extends Component {
+export class Home extends Component {
 
   render() {
 
@@ -82,5 +81,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

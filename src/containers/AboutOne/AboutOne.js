@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
 import { provideHooks } from 'redial';
 
@@ -220,11 +219,11 @@ class AboutOne extends Component {
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    <FilterableTable
+                    {/* <FilterableTable
                       multireducerKey='AboutOneMultireducerFilterableTable2'
                       optionsArray={dropDownOptions2} 
                       description='Filterable Product Table 2'
-                    />
+                    /> */}
 
                   </div>
 
@@ -235,7 +234,7 @@ class AboutOne extends Component {
           </div>
         </div>
 
-        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+        (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
 
         <div className="row">
 
