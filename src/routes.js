@@ -35,7 +35,7 @@ import Register from './containers/Register/Loadable';
 
 import './theme/scss/global/styles.global.scss';
 
-const routes = [{
+export const routes = [{
   component: App,
   routes: [
     { path: '/', exact: true, component: Home },
@@ -70,5 +70,3 @@ const routes = [{
     { component: NotFound }
   ]
 }];
-
-export default routes;

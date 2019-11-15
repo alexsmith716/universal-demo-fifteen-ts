@@ -9,7 +9,7 @@ import { CookieStorage, NodeCookiesWrapper } from 'redux-persist-cookie-storage'
 import { trigger } from 'redial';
 
 import asyncMatchRoutes from './utils/asyncMatchRoutes';
-import routes from './routes';
+import { routes } from './routes';
 import configureStore from './redux/configureStore';
 import initialStatePreloaded from './redux/initial-preloaded-state';
 // import { getUserAgent, isBot } from './utils/device';
