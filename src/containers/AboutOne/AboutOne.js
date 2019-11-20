@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { provideHooks } from 'redial';
 
 import CatsForm from '../../components/widgets/CatsForm/CatsForm';
+import { ClockHooks } from '../../components/widgets/ClockHooks';
 import Clock from '../../components/widgets/Clock/Clock';
 import RandomBootstrapAlert from '../../components/widgets/RandomBootstrapAlert/RandomBootstrapAlert';
 import FilterableTable from '../../components/FilterableTable/FilterableTable';
@@ -60,6 +61,27 @@ class AboutOne extends Component {
         <h1 className={styles.uniqueColor}>About One</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+
+        <div className="row">
+
+          <div className="col-lg-12 mb-4">
+
+            <div className="card h-100">
+
+              <h2 className="card-header text-center font-tester-font2">
+                Clock Hooks!
+              </h2>
+
+              <div className="card-footer text-muted text-center">
+
+                <ClockHooks />
+
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
 

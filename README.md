@@ -140,3 +140,34 @@ https://github.com/TypeStrong/ts-loader
 https://github.com/Realytics/fork-ts-checker-webpack-plugin
 https://github.com/palantir/tslint-react
 
+#### =================================
+#### =================================
+
+Basic Hooks:
+
+    useState
+    useEffect
+    useContext
+
+
+Additional Hooks:
+
+    useReducer
+    useCallback
+    useMemo
+    useRef
+    useImperativeHandle
+    useLayoutEffect
+    useDebugValue
+
+
+
+
+
+
+
+
+
+
+
+
