@@ -1,4 +1,3 @@
-// import React, { FC } from 'react';
 import React from 'react';
 
 interface FooterProps {
