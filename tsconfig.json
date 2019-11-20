@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "checkJs": false,
     "declaration": false,
@@ -8,7 +8,7 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "commonjs",
+    "module": "esnext",
     "noEmit": true,
     "outDir": "./build/",
     "moduleResolution": "node",
@@ -21,15 +21,19 @@
     "sourceMap": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "esnext",
+    "target": "es5",
   },
   "include": [
     "./src/**/*.tsx"
   ],
   "exclude": [
-    "node_modules/**"
+    "node_modules",
+    "build"
   ]
 }
+
+// "alwaysStrict": true
+// "importHelpers": true
 
 // https://blog.angularindepth.com/configuring-typescript-compiler-a84ed8f87e3
 // TypeScript is a superset of ES6, so you're essentially writing TS code using ES6 version of JavaScript.
