@@ -5,6 +5,7 @@
     "declaration": false,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "isolatedModules": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
     "module": "commonjs",

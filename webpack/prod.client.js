@@ -76,7 +76,10 @@ module.exports = {
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          // cacheDirectory: true,
+        },
       },
       // {
       //   test: /\.tsx?$/,
