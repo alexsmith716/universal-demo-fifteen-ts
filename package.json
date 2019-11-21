@@ -19,7 +19,9 @@
     "lint": "eslint bin",
     "test": "NODE_PATH=src jest src",
     "type-check": "tsc",
-    "type-checkTR": "tsc --traceResolution"
+    "type-checkTR": "tsc --traceResolution",
+    "type-checkWA": "tsc --watch",
+    "type-checkNE": "tsc --noEmit"
   },
   "dependencies": {
     "@babel/register": "^7.7.0",
@@ -69,11 +71,9 @@
     "redux-persist": "^6.0.0",
     "redux-persist-cookie-storage": "^1.0.0",
     "regenerator-runtime": "^0.13.3",
-    "remove": "^0.1.5",
     "serialize-javascript": "^2.1.0",
     "serve-favicon": "^2.5.0",
-    "webpack-flush-chunks": "^2.0.3",
-    "yarn": "^1.19.1"
+    "webpack-flush-chunks": "^2.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -90,7 +90,6 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
-    "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@types/react-redux": "^7.1.5",
@@ -171,6 +170,5 @@
       "eslint -c .eslintrc.js",
       "git add"
     ]
-  },
-  "optionalDependencies": {}
+  }
 }
