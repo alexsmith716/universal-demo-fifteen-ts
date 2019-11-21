@@ -2,13 +2,12 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "checkJs": false,
     "declaration": false,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "esnext",
+    "module": "commonjs",
     "noEmit": true,
     "outDir": "./build/",
     "moduleResolution": "node",
@@ -17,11 +16,12 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es5",
+    "target": "esnext",
   },
   "include": [
     "./src/**/*.tsx"
@@ -32,8 +32,21 @@
   ]
 }
 
+// "isolatedModules": true,
+// "resolveJsonModule": true,
 // "alwaysStrict": true
 // "importHelpers": true
+// "checkJs": false,
+
+// @babel/preset-typescript : Transform TypeScript into ES.next
+// https://babeljs.io/docs/en/next/babel-preset-typescript.html
+// https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html
+// https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html#caveats
+// https://github.com/TypeStrong/fork-ts-checker-webpack-plugin
+// https://babeljs.io/docs/en/babel-preset-env#modules
+
+// Node.js uses the commonjs module system, so the value for the module setting is commonjs
+// the target version of JavaScript is es6, which is compatible with modern versions of Node.js
 
 // https://blog.angularindepth.com/configuring-typescript-compiler-a84ed8f87e3
 // TypeScript is a superset of ES6, so you're essentially writing TS code using ES6 version of JavaScript.
@@ -62,11 +75,13 @@
 // This option has no effect on the output since a library is simply ad.ts file with lib API interfaces
 
 // module =============================:
+// which module system to expect
 // target === "ES3" or "ES5" ? "CommonJS" : "ES6"
 // Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext"
 // "ES6" and "ES2015" values may be used when targeting "ES5" or lower
 
 // target =============================:
+// ECMAScript version to compile to
 // specify ECMAScript target version
 // target those version features for the runtime
 // using target ES6 instructs compiler not to transform ES6-specific features
