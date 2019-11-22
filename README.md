@@ -151,6 +151,8 @@ TypeScript:               (target: es5/es6)
 
 TypeScript requires it's own compiler — it's what provides type checking
 
+babel doesn't check TypeScript types
+
 #### =================================
 #### =================================
 
