@@ -153,6 +153,21 @@ TypeScript requires it's own compiler — it's what provides type checking
 
 babel doesn't check TypeScript types
 
+`tsc --noEmit`: typechecks project, without compiling
+
+TypeScript compiles entire project at once
+Babel only compiles one file at a time
+
+For custom transformations that only Babel provides, 
+  the build pipeline is to pass the TypeScript files to the TypeScript compiler and then to Babel afterwards
+
+babel: transpile typescript && loadable components
+
+By default `@babel/preset-env` will use `.browserslistrc` config sources 
+  unless either the `targets` or `ignoreBrowserslistConfig` options are set.
+
+Browserslist defaults: > 0.5%, last 2 versions, Firefox ESR, not dead
+
 #### =================================
 #### =================================
 
@@ -179,8 +194,54 @@ Additional Hooks:
 https://babeljs.io/docs/en/next/babel-preset-env.html
 https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html
 https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html#caveats
+https://babeljs.io/docs/en/configuration
+
+https://babeljs.io/docs/en/config-files
+
+Function-returning configs are given a few special powers because they can access an API exposed by Babel itself. 
+See Config Function API for more information.
+
+JS config files may export a function that will be passed config function API:
+
+The `api` object exposes everything Babel itself exposes from its index module, along with config-file specific APIs:
+
+`api.cache`:
+
+JS configs are great because they can compute a config on the fly, but the downside there is that it makes caching harder. Babel wants to avoid re-executing the config function every time a file is compiled, because then it would also need to re-execute any plugin and preset functions referenced in that config.
+
+To avoid this, Babel expects users of config functions to tell it how to manage caching within a config file.
+
+    api.cache.forever() - Permacache the computed config and never call the function again.
+    api.cache.never() - Do not cache this config, and re-execute the function every time.
+    api.cache.using(() => process.env.NODE_ENV) - Cache based on the value of NODE_ENV. Any time the using callback returns a value other than the one that was expected, the overall config function will be called again and a new entry will be added to the cache.
+    api.cache.invalidate(() => process.env.NODE_ENV) - Cache based on the value of NODE_ENV. Any time the using callback returns a value other than the one that was expected, the overall config function will be called again and all entries in the cache will be replaced with the result.
+    api.cache(true) - Same as api.cache.forever()
+    api.cache(false) - Same as api.cache.never()
+
+Since the actual callback result is used to check if the cache entry is valid, it is recommended that:
+
+    Callbacks should be small and side-effect free.
+    Callbacks should return values with the smallest range possible. For example, the .using(() => process.env.NODE_ENV) usage above is not ideal because it would create an unknown number of cache entries depending on how many values of NODE_ENV are detected. It would be safer to do .using(() => process.env.NODE_ENV === "development") because then the cache entry can only ever be true or false.
+
+`api.env(...)`:
+
+Since `NODE_ENV` is a fairly common way to toggle behavior, Babel also includes an API function meant specifically for that. This API is used as a quick way to check the "envName" that Babel was loaded with, which takes `NODE_ENV` into account if no other overriding environment is set.
+
+It has a few different forms:
+
+    api.env("production") returns true if envName === "production".
+    api.env(["development", "test"]) returns true if ["development", "test"].includes(envName).
+    api.env() returns the current envName string.
+    api.env(envName => envName.startsWith("test-")) returns true if the env starts with "test-".
+
+    Note: This function internally makes use of api.cache mentioned above to ensure that Babel is aware that this build depends on a specific envName. You should not use it alongside with api.cache.forever() or api.cache.never().
+
 
 ```js
+
+module.exports = function(api) {
+  return {};
+}
 
 {
   test: /\.(ts|js)x?$/,
