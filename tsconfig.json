@@ -5,24 +5,18 @@
     "declaration": false,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "commonjs",
-    "noEmit": true,
     "outDir": "./build/",
     "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "removeComments": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "target": "esnext",
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "./src/**/*.tsx"
@@ -33,16 +27,40 @@
   ]
 }
 
-// "isolatedModules": true,
-// "resolveJsonModule": true,
-// "alwaysStrict": true
-// "importHelpers": true
-// "checkJs": false,
-
 // @babel/preset-typescript : Transform TypeScript into ES.next
 // https://babeljs.io/docs/en/next/babel-preset-typescript.html
 // https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html
-// https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html#caveats
+
+// '@babel/preset-typescript' includes the plugins of '@babel/plugin-transform-typescript'
+ 
+// ==========================================================================================
+// ========================= @babel/plugin-transform-typescript =============================
+// ==========================================================================================
+
+// '@babel/plugin-transform-typescript' adds support for the syntax used by the TypeScript programming language. 
+// However, this plugin does not add the ability to type-check the JavaScript passed to it. 
+// For that, you will need to install and set up TypeScript.
+
+// '@babel/plugin-transform-typescript' >>>>>> TypeScript Compiler Options:
+
+// 'The official TypeScript compiler' has many options for configuring how it compiles and type checks. 
+// 'While many don't apply', 'some' behaviors might be useful 
+//   and 'their equivalents in Babel' can be enabled by 'some' configuration options or plugins.
+
+//  --module, -m: 
+//      If you are using a bundler (Webpack or Rollup), this option is set automatically. 
+//      If you are using @babel/preset-env, you can use the modules option; 
+//      otherwise you can load the specific plugin.
+
+//  --target: 
+//      Babel doesn't support targeting a specific version of the language, 
+//      but you can choose which engines you want to target using @babel/preset-env. 
+//      If you prefer, you can enable individual plugins for every ECMAScript feature.
+
+// ==========================================================================================
+// ==========================================================================================
+// ==========================================================================================
+
 // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin
 // https://babeljs.io/docs/en/babel-preset-env#modules
 
@@ -55,7 +73,6 @@
 // all browsers support most of ES6 spec, so ES6 may be a good option with some shims
 // target option: define which version of JS the compiler should transpile into
 // By default, TS compiler outputs transpiled files to the same directory where the original TS files is found.
-
 
 // lib =============================:
 // library files to be included in compilation
