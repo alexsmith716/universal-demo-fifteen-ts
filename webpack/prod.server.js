@@ -1,7 +1,8 @@
-const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const externals = require('./node-externals');
+
+process.env.IS_CLIENT = false;
 
 const WebpackBar = require('webpackbar');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -14,17 +15,6 @@ const generatedIdent = (name, localName, lr) => {
   const r = Buffer.from(lr).toString('base64');
   return name + '__' + localName + '--' + r.substring( r.length-12, r.length-3 );
 };
-
-// const babelrc = fs.readFileSync('./.babelrc', 'utf8');
-// let prodconfig = {};
-// 
-// try {
-//   prodconfig = JSON.parse(babelrc);
-//   console.error('>>>>>>>>> webpack prod.server > SUCCESS: parsing .babelrc !!typeof: ', typeof prodconfig)
-//   console.error('>>>>>>>>> webpack prod.server > SUCCESS: parsing .babelrc !!: ', prodconfig)
-// } catch (err) {
-//   console.error('>>>>>>>>> webpack prod.server > ERROR: parsing .babelrc: ', err)
-// }
 
 module.exports = {
 
@@ -55,7 +45,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          // cacheDirectory: true,
+          babelrc: false,
+          configFile: path.resolve(rootPath, 'babel.configServer.js'),
+          // cacheDirectory: true
         },
       },
       // {
@@ -64,9 +56,6 @@ module.exports = {
       //     'babel-loader',
       //     {
       //       loader: 'awesome-typescript-loader',
-      //       options: {
-      //         // useCache: true
-      //       },
       //     },
       //   ],
       // },
@@ -231,7 +220,7 @@ module.exports = {
     }),
 
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify('production') },
+      'process.env.IS_CLIENT': false,
       __CLIENT__: false,
       __SERVER__: true,
       __DEVELOPMENT__: false,

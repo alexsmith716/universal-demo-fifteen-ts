@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-
 const WebpackBar = require('webpackbar');
+
+process.env.IS_CLIENT = true;
 
 // const TerserPlugin = require('terser-webpack-plugin');
 // const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -27,25 +28,6 @@ const generatedIdent = (name, localName, lr) => {
   const r = Buffer.from(lr).toString('base64');
   return name + '__' + localName + '--' + r.substring( r.length-12, r.length-3 );
 };
-
-// https://github.com/bholloway/resolve-url-loader/blob/master/packages/resolve-url-loader/README.md#configure-webpack
-// source-maps required for loaders preceding resolve-url-loader (regardless of devtool)
-
-// https://webpack.js.org/api/node/
-// https://webpack.js.org/configuration/stats/
-
-// https://webpack.js.org/plugins/split-chunks-plugin/
-// https://github.com/webpack/webpack/blob/master/examples/many-pages/README.md
-
-// https://cssnano.co/guides/
-// https://cssnano.co/guides/presets/
-
-// Combining gzip compression with minification leads to the best reduction in file size
-
-// BABEL-LOADER:
-// Loads ES2015+ code and transpiles to ES5 using Babel
-// awesome-typescript-loader:
-// transform files from a different language (TypeScript) to JavaScript
 
 module.exports = {
 
@@ -78,7 +60,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          // cacheDirectory: true,
+          babelrc: false,
+          configFile: path.resolve(rootPath, 'babel.configClient.js'),
+          // cacheDirectory: true
         },
       },
       // {
@@ -87,9 +71,6 @@ module.exports = {
       //     'babel-loader',
       //     {
       //       loader: 'awesome-typescript-loader',
-      //       options: {
-      //         // useCache: true
-      //       },
       //     },
       //   ],
       // },
@@ -320,7 +301,7 @@ module.exports = {
 
     // '__DLLS__: false' : needed for SWPrecacheWebpackPlugin
     new webpack.DefinePlugin({
-      'process.env': { NODE_ENV: JSON.stringify('production') },
+      'process.env.IS_CLIENT': true,
       __CLIENT__: true,
       __SERVER__: false,
       __DEVELOPMENT__: false,
