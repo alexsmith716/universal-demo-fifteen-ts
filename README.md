@@ -7,6 +7,15 @@ App is a continuation of fourteen and uses TypeScript..
 =============================================================
 =============================================================
 
+### Removed without errors:
+
+* ['@babel/plugin-transform-runtime',{corejs: {version: 3,proposals: true}}],
+* '@babel/plugin-proposal-object-rest-spread',
+* '@babel/plugin-transform-async-to-generator',
+
+=============================================================
+=============================================================
+
 ### TypeScript compiler > target > ES5/6
 
 Will initially target ES6

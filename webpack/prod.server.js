@@ -158,6 +158,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10240,
+          esModule: false
         },
       },
       {
@@ -165,7 +166,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10240,
-          mimetype: 'application/font-woff'
+          mimetype: 'application/font-woff',
+          esModule: false
         }
       },
       {
@@ -173,19 +175,24 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10240,
-          mimetype: 'application/octet-stream'
+          mimetype: 'application/octet-stream',
+          esModule: false
         }
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          esModule: false
+        },
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader',
         options: {
           limit: 10240,
-          mimetype: 'image/svg+xml'
+          mimetype: 'image/svg+xml',
+          esModule: false
         }
       },
     ]
