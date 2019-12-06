@@ -1,8 +1,13 @@
 # universal-demo-fifteen-ts
 
+"core-js": "^3.4.7",
+
+https://webpack.js.org/configuration/target/
+https://webpack.js.org/concepts/targets/
+
 ## Overview:
 
-App is a continuation of fourteen and uses TypeScript.. 
+App is a continuation of fourteen and uses TypeScript.
 
 =============================================================
 =============================================================
