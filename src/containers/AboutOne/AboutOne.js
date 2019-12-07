@@ -32,7 +32,6 @@ class AboutOne extends Component {
       'https://api.github.com/events',
       'https://api.github.com/gists/public',
       'https://api.github.com/gists/656565656565',
-      '/json-data/product-categories-test.json',
       '/json-data/product-categories-small.json',
       '/json-data/product-categories.json',
       '/json-data/product-categories-small.json',
@@ -241,11 +240,11 @@ class AboutOne extends Component {
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    {/* <FilterableTable
+                    <FilterableTable
                       multireducerKey='AboutOneMultireducerFilterableTable2'
                       optionsArray={dropDownOptions2} 
                       description='Filterable Product Table 2'
-                    /> */}
+                    />
 
                   </div>
 
