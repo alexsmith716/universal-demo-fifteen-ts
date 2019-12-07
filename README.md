@@ -301,6 +301,13 @@ module.exports = api => {
 
 #### =================================
 
+removed 'core-js' and 'regenerator-runtime'
+using '@babel/runtime-corejs3' (contains 'core-js' and 'regenerator-runtime')
+
+build 140KB smaller than 'bootstrap-react-redux-ssr-fourteen'
+
+#### =================================
+
 @babel/preset-env:
   'Using polyfills with `usage` option:'
   'Based on your code and targets, added regenerator-runtime.'
