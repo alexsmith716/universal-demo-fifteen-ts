@@ -298,3 +298,19 @@ module.exports = api => {
 }
 
 ```
+
+#### =================================
+
+@babel/preset-env:
+  'Using polyfills with `usage` option:'
+  'Based on your code and targets, added regenerator-runtime.'
+
+Error without `usage`: 'ReferenceError: regeneratorRuntime is not defined'
+
+Files affected:
+
+* client.js
+* asyncMatchRoutes.js
+* info.js
+* mockAPI.js
+* App.js
