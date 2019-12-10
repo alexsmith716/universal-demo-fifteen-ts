@@ -13,7 +13,7 @@ module.exports = {
     '@babel/preset-typescript'
   ],
   extends: './babel.configMain.js'
-}
+};
 
 // https://kangax.github.io/compat-table/es6/
 // https://kangax.github.io/compat-table/es2016plus/
@@ -26,6 +26,7 @@ module.exports = {
 //    * configures handling of polyfills
 
 // "corejs":
+//    * option only has an effect when used alongside "useBuiltIns: usage" or "useBuiltIns: entry"
 //    * injects correct imports for 'core-js' version
 //    * when using "corejs: { version: 3, proposals: true }":
 //      * enables polyfilling of every proposal supported by 'core-js'
