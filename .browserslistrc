@@ -1,6 +1,8 @@
 # Run 'npx browserslist' in project directory to see what browsers selected
 
-> 0.20%
+# > 0.5%
+last 2 versions
+# Firefox ESR
 not dead
 not op_mini all
 
