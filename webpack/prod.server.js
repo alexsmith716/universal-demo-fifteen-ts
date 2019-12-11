@@ -46,7 +46,7 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           babelrc: false,
-          configFile: path.resolve(rootPath, 'babel.configServer.js'),
+          configFile: path.resolve(rootPath, 'babel.config.server.js'),
           // cacheDirectory: true
         },
       },

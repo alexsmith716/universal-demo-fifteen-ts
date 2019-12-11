@@ -12,6 +12,17 @@ module.exports = {
 };
 
 // https://github.com/kangax/compat-table/blob/gh-pages/environments.json
+// https://github.com/mdn/browser-compat-data
+// https://caniuse.com/#feat=es6-module
+// https://caniuse.com/#feat=es6
+// https://caniuse.com/#search=export
+
+// ECMAScript 2015 (ES6):
+// Node >=8.10 <9
+// Support for the ECMAScript 2015 specification. 
+// Features include Promises, Modules, Classes, Template Literals, Arrow Functions, Let and Const, 
+//   >> Default Parameters, Generators, Destructuring Assignment, Rest & Spread, 
+//   >> Map/Set & WeakMap/WeakSet and many more
 
 // "node12_11": {
 //   "full": "Node.js",
