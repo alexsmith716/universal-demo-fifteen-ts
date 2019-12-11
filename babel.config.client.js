@@ -3,16 +3,17 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        useBuiltIns: undefined,
-        corejs: false,
-        targets: { node: 'current' },
+        modules: false,
+        useBuiltIns: 'usage',
+        corejs: { version: 3, proposals: true },
+        targets: undefined,
         // debug: true
       }
     ],
     '@babel/preset-react',
     '@babel/preset-typescript'
   ],
-  extends: './babel.configMain.js'
+  extends: './babel.config.presets.js'
 };
 
 // https://kangax.github.io/compat-table/es6/
@@ -23,18 +24,18 @@ module.exports = {
 
 // "useBuiltIns: 'usage'":
 //    * Adds specific imports for polyfills when they are used in each file
+//      >>>>> a bundler will load the same polyfill only once <<<<<<
 //    * configures handling of polyfills
 
 // "corejs":
-//    * option only has an effect when used alongside "useBuiltIns: usage" or "useBuiltIns: entry"
 //    * injects correct imports for 'core-js' version
 //    * when using "corejs: { version: 3, proposals: true }":
 //      * enables polyfilling of every proposal supported by 'core-js'
 
 // "targets": environment supported/targeted/compiled against (browser/node/android/electron)
+//    * string | Array<string> | { [string]: string }, defaults to {}
 
-// Using polyfills: No polyfills were added, since the `useBuiltIns` option was not set
-
-// '@babel/plugin-transform-runtime',{corejs: {version: 3, proposals: true}}
-//    * without: 626/999 KB
-//    * with:    561/909 KB
+// modules (default: "commonjs"):
+// 'modules' option configures which module format ES6 modules are transpiled to:
+//    * transpiled 'module' formats: "amd", "commonjs", "systemjs", "umd"
+//    * do not transpile: false
