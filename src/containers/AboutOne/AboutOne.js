@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { provideHooks } from 'redial';
 
 import CatsForm from '../../components/widgets/CatsForm/CatsForm';
-// import { ClockHooks } from '../../components/widgets/ClockHooks';
+import { ClockHooks } from '../../components/widgets/ClockHooks';
 import Clock from '../../components/widgets/Clock/Clock';
 import RandomBootstrapAlert from '../../components/widgets/RandomBootstrapAlert/RandomBootstrapAlert';
 import FilterableTable from '../../components/FilterableTable/FilterableTable';
@@ -75,7 +75,7 @@ class AboutOne extends Component {
 
               <div className="card-footer text-muted text-center">
 
-                {/* <ClockHooks /> */}
+                <ClockHooks />
 
               </div>
             </div>
