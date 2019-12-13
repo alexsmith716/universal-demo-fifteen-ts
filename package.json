@@ -19,10 +19,9 @@
     "prettier": "prettier-eslint --write --eslint-config-path .eslintrc.js './+(bin)/**/*.js'",
     "lint": "eslint bin",
     "test": "jest src",
-    "type-checkTSC": "tsc",
-    "type-checkTR": "tsc --traceResolution",
-    "type-checkWA": "tsc --watch",
-    "type-check": "tsc --noEmit"
+    "type-check-TR": "tsc --traceResolution",
+    "type-check-W": "tsc --watch",
+    "type-check-E": "tsc --noEmit false"
   },
   "dependencies": {
     "@babel/register": "^7.7.4",

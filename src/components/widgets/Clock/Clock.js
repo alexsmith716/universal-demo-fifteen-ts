@@ -13,12 +13,11 @@ class Clock extends Component {
 
   componentDidMount() {
     // register function to be invoked repeatedly after elapse of 1 sec
-    // this.timerID = setInterval( () => this.callbackFunction(), 1000 );
-    this.callbackFunction()
+    this.timerID = setInterval( () => this.callbackFunction(), 1000 );
   }
 
   componentWillUnmount() {
-    // clearInterval(this.timerID);
+    clearInterval(this.timerID);
   }
 
   callbackFunction = () => this.setState({ date: new Date(), });
