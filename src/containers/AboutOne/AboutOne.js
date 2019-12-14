@@ -83,7 +83,26 @@ class AboutOne extends Component {
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    <ClockHooks />
+                    <div className="row justify-content-center">
+                      <div className="col-md-auto">
+
+                        <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
+                          <div className="width-400 text-center">
+
+                            <div className="row">
+
+                              <div className="col">
+                                <ClockHooks />
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
 
                   </div>
 
@@ -392,7 +411,26 @@ class AboutOne extends Component {
 
               <div className="card-footer text-muted text-center">
 
-                <Clock />
+                <div className="row justify-content-center">
+                  <div className="col-md-auto">
+
+                    <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
+                      <div className="width-400 text-center">
+
+                        <div className="row">
+
+                          <div className="col">
+                            <Clock />
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
 
               </div>
             </div>
