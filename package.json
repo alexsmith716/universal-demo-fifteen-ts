@@ -19,9 +19,9 @@
     "prettier": "prettier-eslint --write --eslint-config-path .eslintrc.js './+(bin)/**/*.js'",
     "lint": "eslint bin",
     "test": "jest src",
-    "type-check-TR": "tsc --traceResolution",
-    "type-check-W": "tsc --watch",
-    "type-check-E": "tsc --noEmit false"
+    "check-types-t": "tsc --traceResolution",
+    "check-types-w": "tsc --watch",
+    "check-types": "tsc --noEmit false"
   },
   "dependencies": {
     "@babel/register": "^7.7.4",
@@ -102,8 +102,8 @@
     "babel-plugin-universal-import": "^4.0.0",
     "chai": "^4.2.0",
     "colors": "^1.4.0",
-    "copy-webpack-plugin": "^5.1.0",
-    "css-loader": "^3.3.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.3.2",
     "enzyme": "^3.10.0",
     "eslint": "^6.7.2",
     "eslint-loader": "^3.0.3",
@@ -142,7 +142,7 @@
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "sass-resources-loader": "^2.0.1",
-    "terser-webpack-plugin": "^2.2.2",
+    "terser-webpack-plugin": "^2.3.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.3",
