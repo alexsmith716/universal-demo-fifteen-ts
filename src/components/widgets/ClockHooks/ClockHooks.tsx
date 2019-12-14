@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 export const ClockHooks = () => {
 
@@ -27,26 +27,9 @@ export const ClockHooks = () => {
 
     return (
 
-      <div className="row justify-content-center">
-        <div className="col-md-auto">
-
-          <div className="d-flex bg-color-ivory container-padding-border-radius-2">
-
-            <div className="width-400 text-center">
-
-              <div className="row">
-
-                <div className="col">
-                  {t}
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <Fragment>
+        {t}
+      </Fragment>
     );
   }
 }

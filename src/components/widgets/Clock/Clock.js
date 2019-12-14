@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 
 
 class Clock extends Component {
@@ -27,26 +27,10 @@ class Clock extends Component {
     const t = this.state.date.toLocaleTimeString();
 
     return (
-      <div className="row justify-content-center">
-        <div className="col-md-auto">
 
-          <div className="d-flex bg-color-ivory container-padding-border-radius-2">
-
-            <div className="width-400 text-center">
-
-              <div className="row">
-
-                <div className="col">
-                  {t}
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <Fragment>
+        {t}
+      </Fragment>
     );
   }
 }
