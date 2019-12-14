@@ -73,9 +73,21 @@ class AboutOne extends Component {
                 Clock Hooks!
               </h2>
 
-              <div className="card-footer text-muted text-center">
+              <div className="card-body">
 
-                <ClockHooks />
+                <h5 className="card-title text-center">
+                  React <i>Effect Hook</i> function component
+                </h5>
+
+                <div className="basic-outer-box padding-two-border-radius-six">
+
+                  <div className="basic-inner-box padding-five-border-radius-three">
+
+                    <ClockHooks />
+
+                  </div>
+
+                </div>
 
               </div>
             </div>

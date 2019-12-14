@@ -21,13 +21,32 @@ export const ClockHooks = () => {
 
   if (date === d) {
     return 'Loading...';
+  } else {
+
+    const t = date.toLocaleTimeString();
+
+    return (
+
+      <div className="row justify-content-center">
+        <div className="col-md-auto">
+
+          <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
+            <div className="width-400 text-center">
+
+              <div className="row">
+
+                <div className="col">
+                  {t}
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    );
   }
-
-  return (
-    <div>
-
-      <p>You clicked {date.toLocaleTimeString()} times</p>
-
-    </div>
-  );
 }
