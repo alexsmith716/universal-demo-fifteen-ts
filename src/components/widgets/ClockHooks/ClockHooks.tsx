@@ -1,34 +1,56 @@
 import React, { useState, useEffect } from 'react';
 
-export const ClockHooks = () => {
+interface ClockHooksProps {
+  TODO_TYPEME: any;
+}
+
+export const ClockHooks = ({ TODO_TYPEME }: ClockHooksProps) => {
 
   const d = new Date();
+  let timerID = TODO_TYPEME;
 
-  const [date, setDate] = useState(d);
+  // declare new state variables "time, pause"
+  // && initialize the "time && pause" state "useState(initialize)"
+  // function component has no "this" (can't assign or read "this.state")
+  // call the 'useState' hook directly inside component "useState(false)"
+  // state variables are preserved by React (normally, variables "disappear" when function exits)
+  // React remembers current value between re-renders, and provides the most recent one
+  // state is only created the first time a component renders
+  // "useState()" returns a pair of values: the 'current state' and a 'function that updates'
+  const [time, setTime] = useState(d);
+  // const [time, setTime] = useState({d:new Date(), interval: ''});
+
+  const handleButtonClick = () => {
+    // todo toggle
+    clearInterval(timerID);
+  };
 
   // >>>> componentDidMount and componentDidUpdate <<<<
   useEffect(() => {
 
-    const timerID = setInterval( () => setDate(new Date()), 1000);
-    // console.log('>>>>>>>>>>>>>>>> ClockHooks > timerID: ', timerID);
+    timerID = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
     // return named function or arrow function from the effect
     // return function cleanup() {
     return () => {
       clearInterval(timerID);
-      // console.log('>>>>>>>>>>>>>>>> ClockHooks > clearInterval: ', timerID);
     };
   });
 
-  if (date === d) {
+  if (time === d) {
     return 'Loading...';
   } else {
 
-    const t = date.toLocaleTimeString();
+    const t = time.toLocaleTimeString();
 
     return (
       <>
         {t}
+        <button onClick={handleButtonClick}>
+          Clear Time Interval
+        </button>
       </>
     );
   }
