@@ -1,5 +1,4 @@
-import React, { Fragment, Component } from 'react';
-
+import React, { Component } from 'react';
 
 class Clock extends Component {
 
@@ -7,7 +6,7 @@ class Clock extends Component {
     super(props);
 
     this.state = {
-      date: new Date(),
+      time: new Date(),
     };
   }
 
@@ -20,17 +19,16 @@ class Clock extends Component {
     clearInterval(this.timerID);
   }
 
-  callbackFunction = () => this.setState({ date: new Date(), });
+  callbackFunction = () => this.setState({ time: new Date(), });
 
   render() {
 
-    const t = this.state.date.toLocaleTimeString();
+    const t = this.state.time.toLocaleTimeString();
 
     return (
-
-      <Fragment>
+      <>
         {t}
-      </Fragment>
+      </>
     );
   }
 }
