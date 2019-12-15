@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 function Html({ assets, content, store }) {
   return (
-    <Fragment>
+    <>
       <head>
 
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
@@ -57,7 +57,7 @@ function Html({ assets, content, store }) {
           ))}
 
       </body>
-    </Fragment>
+    </>
   );
 };
 
