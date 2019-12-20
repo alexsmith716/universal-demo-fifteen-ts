@@ -6,11 +6,16 @@ import { RouterTrigger } from './RouterTrigger';
 import { ReadmeModal } from './modals/ReadmeModal';
 import { FontsModal } from './modals/FontsModal';
 
+import { ClockHooksCustom } from './widgets/hooks/ClockHooksCustom';
+import { ClockHooks } from './widgets/hooks/ClockHooks';
+
 export {
   Footer,
   Notifs,
   InfoBar,
   RouterTrigger,
   ReadmeModal,
-  FontsModal
+  FontsModal,
+  ClockHooksCustom,
+  ClockHooks
 };
