@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { provideHooks } from 'redial';
 
+import { ClockHooksCustom } from '../../components';
+import { ClockHooks } from '../../components';
+
 import CatsForm from '../../components/widgets/CatsForm/CatsForm';
-import { ClockHooks } from '../../components/widgets/ClockHooks';
 import Clock from '../../components/widgets/Clock/Clock';
 import RandomBootstrapAlert from '../../components/widgets/RandomBootstrapAlert/RandomBootstrapAlert';
 import FilterableTable from '../../components/FilterableTable/FilterableTable';
@@ -60,6 +62,58 @@ class AboutOne extends Component {
         <h1 className={styles.uniqueColor}>About One</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+
+        <div className="row">
+
+          <div className="col-lg-12 mb-4">
+
+            <div className="card h-100">
+
+              <h2 className="card-header text-center font-tester-font2">
+                Clock Hooks!
+              </h2>
+
+              <div className="card-body">
+
+                <h5 className="card-title text-center">
+                  Making 'setInterval' Declarative
+                </h5>
+
+                <div className="basic-outer-box padding-two-border-radius-six">
+
+                  <div className="basic-inner-box padding-five-border-radius-three">
+
+                    <div className="row justify-content-center">
+                      <div className="col-md-auto">
+
+                        <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
+                          <div className="width-400 text-center">
+
+                            <div className="row">
+
+                              <div className="col">
+                                <ClockHooksCustom />
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
 

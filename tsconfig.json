@@ -29,6 +29,18 @@
   ]
 }
 
+// provide types for all declarations
+// define the types of the property and state object
+// enable strict null checks as a best practice
+// "strict": true >>> Enable all strict type checking options:
+//      --noImplicitAny, 
+//      --noImplicitThis, 
+//      --alwaysStrict, 
+//      --strictBindCallApply, 
+//      --strictNullChecks, 
+//      --strictFunctionTypes
+//      --strictPropertyInitialization
+
 // "./src/**/*.tsx",
 // "./src/**/*.ts"
 

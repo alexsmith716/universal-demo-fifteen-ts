@@ -17,6 +17,8 @@ export const ClockHooks = ({ TODO_TYPEME }: ClockHooksProps) => {
   // React remembers current value between re-renders, and provides the most recent one
   // state is only created the first time a component renders
   // "useState()" returns a pair of values: the 'current state' and a 'function that updates'
+
+  // type inference: initial value of "useState()" will infer the type for the returned pair
   const [time, setTime] = useState(d);
   // const [time, setTime] = useState({d:new Date(), interval: ''});
 
@@ -55,20 +57,3 @@ export const ClockHooks = ({ TODO_TYPEME }: ClockHooksProps) => {
     );
   }
 }
-
-// useEffect(() => {
-//   document.title = `You clicked ${count} times`;
-// }, [count]); // Only re-run the effect if count changes
-
-// This also works for effects that have a cleanup phase:
-// 
-// useEffect(() => {
-//   function handleStatusChange(status) {
-//     setIsOnline(status.isOnline);
-//   }
-// 
-//   ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
-//   return () => {
-//     ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
-//   };
-// }, [props.friend.id]); // Only re-subscribe if props.friend.id changes
