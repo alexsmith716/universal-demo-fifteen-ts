@@ -13,7 +13,7 @@ module.exports = {
     '@babel/preset-react',
     '@babel/preset-typescript'
   ],
-  extends: './babel.config.presets.js'
+  extends: './babel.config.plugins.js'
 };
 
 // https://kangax.github.io/compat-table/es6/
