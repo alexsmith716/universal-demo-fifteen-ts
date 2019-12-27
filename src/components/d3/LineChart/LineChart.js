@@ -106,7 +106,7 @@ class LineChart extends Component {
         <div className="col-md-auto">
 
           <div className="d-flex bg-color-ivory container-padding-border-radius-2">
-            <div className="display-flex-justify-direction-align-center width-500">
+            <div className="width-500">
 
               <p>{title}</p>
 
