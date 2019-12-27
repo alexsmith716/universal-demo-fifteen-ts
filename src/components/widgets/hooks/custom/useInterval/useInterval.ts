@@ -16,6 +16,8 @@ import { useEffect, useRef } from 'react';
 // export const useInterval = ({ callback, delay, initial }: useIntervalProps) => {
 export const useInterval = (callback: any, delay: number, notSure?: any) => {
 
+  // If `notSure` isn't given in `Props` object, it defaults to `any`
+
   // let notSure: any = null;
 
   // const savedCallback = React.useRef<HTMLDivElement>(null);
@@ -33,7 +35,7 @@ export const useInterval = (callback: any, delay: number, notSure?: any) => {
   useEffect(() => { // Not all code paths return a value.
 
     // run additional code after React has updated the DOM (Effect Hook)
-    // ====================================================================================================
+    // ===================================================================================
 
     // run code and immediately forget about it
     function tick() {

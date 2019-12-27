@@ -5,8 +5,6 @@ https://webpack.js.org/concepts/targets/
 
 ## Overview:
 
-App is a continuation of fourteen and uses TypeScript.
-
 =============================================================
 =============================================================
 

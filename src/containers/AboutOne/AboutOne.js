@@ -565,4 +565,3 @@ class AboutOne extends Component {
 }
 
 export default AboutOne;
-
