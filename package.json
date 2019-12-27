@@ -130,6 +130,7 @@
     "postcss-url": "^8.0.0",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
+    "react-devtools": "^4.3.0",
     "react-hot-loader": "^4.12.18",
     "redux-devtools": "^3.5.0",
     "redux-devtools-dock-monitor": "^1.1.3",
