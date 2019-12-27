@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
+// type named `ClockHooksProps`
+// type `ClockHooksProps` specifies the properties the component will take
+
 interface ClockHooksProps {
   TODO_TYPEME: any;
 }
+
+// `ClockHooks` is a function that takes a `ClockHooksProps` object, and destructures it
 
 export const ClockHooks = ({ TODO_TYPEME }: ClockHooksProps) => {
 

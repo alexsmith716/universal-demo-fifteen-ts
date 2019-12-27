@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet-async';
 
+// import { DragAndDrop } from '../../components';
+
 class AboutThree extends Component {
 
   render() {
@@ -16,6 +18,60 @@ class AboutThree extends Component {
         <Helmet title="About Three" />
 
         <h1 className={`mt-4 mb-3 ${styles.uniqueColor}`}>About Three</h1>
+
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+
+        <div className="row">
+
+          <div className="col-lg-12 mb-4">
+
+            <div className="card h-100">
+
+              <h2 className="card-header text-center font-tester-font2">
+                Drag And Drop Hooks!
+              </h2>
+
+              <div className="card-body">
+
+                <h5 className="card-title text-center">
+                  Drag And Drop
+                </h5>
+
+                <div className="basic-outer-box padding-two-border-radius-six">
+
+                  <div className="basic-inner-box padding-five-border-radius-three">
+
+                    <div className="row justify-content-center">
+                      <div className="col-md-auto">
+
+                        <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
+                          <div className="width-400 text-center">
+
+                            <div className="row">
+
+                              <div className="col">
+                                {/* <DragAndDrop /> */}
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
 
         <div className="row">
           <div className="col-lg-6">

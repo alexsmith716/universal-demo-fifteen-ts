@@ -50,19 +50,6 @@ module.exports = {
           // cacheDirectory: true
         },
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   loader: [
-      //     'babel-loader',
-      //     {
-      //       loader: 'awesome-typescript-loader',
-      //     },
-      //   ],
-      // },
-      // {
-      //   test: /\.tsx?$/,
-      //   loader: 'awesome-typescript-loader',
-      // },
       {
         test: /\.(scss)$/,
         exclude: /node_modules/,

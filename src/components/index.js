@@ -8,6 +8,7 @@ import { FontsModal } from './modals/FontsModal';
 
 import { ClockHooksCustom } from './widgets/hooks/ClockHooksCustom';
 import { ClockHooks } from './widgets/hooks/ClockHooks';
+// import { DragAndDrop } from './widgets/hooks/DragAndDrop';
 
 export {
   Footer,
@@ -17,5 +18,6 @@ export {
   ReadmeModal,
   FontsModal,
   ClockHooksCustom,
-  ClockHooks
+  ClockHooks,
+  // DragAndDrop
 };

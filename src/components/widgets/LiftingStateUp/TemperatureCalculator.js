@@ -40,7 +40,8 @@ class TemperatureCalculator extends Component {
       <div className="row justify-content-md-center">
         <div className="col-md-auto">
 
-          <div className="container-flex bg-color-ivory container-padding-border-radius-2">
+          <div className="d-flex bg-color-ivory container-padding-border-radius-2">
+
             <div className="width-400">
 
               <form>
