@@ -10,7 +10,7 @@ import DropdownSelect from '../DropdownSelect/DropdownSelect';
 import * as filterableTableActions from '../../redux/modules/filterableTable';
 
 import enumerateObjectValues from '../../utils/enumerateObjectValues';
-import promiseGenerator from '../../utils/promiseGenerator';
+import { promiseGenerator } from '../../utils/promiseGenerator';
 
 @connect(
   (state, { multireducerKey: key  }) => ({
@@ -183,26 +183,26 @@ class FilterableTable extends Component {
       load({ request: dropDownOptionSelected });
     }
 
-    if (loaded && !loading) {
-      console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() !!!!!!!!!!!!!!!!!');
+    // if (loaded && !loading) {
+    //   console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() !!!!!!!!!!!!!!!!!');
 
-      const result = promiseGenerator();
-      let p  = result.next().value;
+    //   const result = promiseGenerator();
+    //   let p  = result.next().value;
 
-      p.then(r => {
-        console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() > result.next().value: ', p);
-        console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() > resolve: ', r);
-        return result.next(r)
-      });
+    //   p.then(r => {
+    //     console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() > result.next().value: ', p);
+    //     console.log('>>>>>>>>>>>>>>>> FilterableTable > promiseGenerator() > resolve: ', r);
+    //     return result.next(r)
+    //   });
 
-      return enumerateObjectValues({"category": "Sporting Goods Small 2"})
-        .then(response => {
-          console.log('>>>>>>>>>>>>>>>> FilterableTable > SELECTED_OPTION LOAD LOAD_SUCCESS > enumerateObjectValues > returned: ', response);
-        })
-        .catch(error => {
-          console.log('>>>>>>>>>>>>>>>> FilterableTable > cSELECTED_OPTION LOAD LOAD_SUCCESS > enumerateObjectValues > ERROR: ');
-        })
-    }
+    //   return enumerateObjectValues({"category": "Sporting Goods Small 2"})
+    //     .then(response => {
+    //       console.log('>>>>>>>>>>>>>>>> FilterableTable > SELECTED_OPTION LOAD LOAD_SUCCESS > enumerateObjectValues > returned: ', response);
+    //     })
+    //     .catch(error => {
+    //       console.log('>>>>>>>>>>>>>>>> FilterableTable > cSELECTED_OPTION LOAD LOAD_SUCCESS > enumerateObjectValues > ERROR: ');
+    //     })
+    // }
   };
 
   // ==============================================================================================

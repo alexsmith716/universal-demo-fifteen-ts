@@ -13,8 +13,15 @@ import { useEffect, useRef } from 'react';
 // extract component logic into a reusable function "useInterval()"
 // callback: () => { setCount(count + 1); }
 
-// export const useInterval = ({ callback, delay, initial }: useIntervalProps) => {
-export const useInterval = (callback: any, delay: number, notSure?: any) => {
+// interface useIntervalProps {
+//   callback: any;
+//   delay: number;
+//   notSure?: any;
+// }
+
+// export const useInterval = function({ callback, delay, notSure }: useIntervalProps) {
+// export const useInterval = (callback: any, delay: number, notSure?: any) => {
+export const useInterval = function(callback: any, delay: number, notSure?: any) {
 
   // If `notSure` isn't given in `Props` object, it defaults to `any`
 

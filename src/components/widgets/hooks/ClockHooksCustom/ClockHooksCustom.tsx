@@ -8,7 +8,7 @@ export const ClockHooksCustom = () => {
   let [count, setCount] = useState(0);
 
   // useInterval( () => { setCount(count + 1); } , 1000, null);
-  useInterval( () => { setCount(count + 1); } , 1000);
+  useInterval( () => { setCount(count + 1); }, 1000);
 
   return (
     <>
