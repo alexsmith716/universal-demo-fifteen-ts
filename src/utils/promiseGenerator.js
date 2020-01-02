@@ -25,6 +25,8 @@ promiseAllTasks
 
 // -----------------------------------------------
 
+// -----------------------------------------------
+
 function interruptingTask1() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

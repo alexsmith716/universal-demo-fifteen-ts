@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
+    "alwaysStrict": false,
     "declaration": false,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -13,7 +13,7 @@
     "outDir": "./build/",
     "moduleResolution": "node",
     "noEmit": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -27,13 +27,10 @@
     "src/**/*"
   ],
   "exclude": [
-    "node_modules",
     "build"
+    "node_modules",
   ]
 }
-
-// compilation method
-// type checking
 
 // https://github.com/babel/babel/blob/e74efd2c0a03badef66c28f29d566967ac8af0ef/scripts/parser-tests/typescript/whitelist.txt
 // https://babeljs.io/docs/en/next/babel-plugin-transform-typescript.html
