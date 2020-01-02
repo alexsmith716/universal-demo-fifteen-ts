@@ -254,6 +254,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.css', '.scss'],
+    alias: {
+      react: path.resolve('./node_modules/react'), // https://github.com/facebook/react/issues/13991 (duplicate react's in dependency tree)
+    }
   },
 
   plugins: [
