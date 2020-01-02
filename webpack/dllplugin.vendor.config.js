@@ -25,8 +25,6 @@ module.exports = {
 
   entry: {
     vendor: [
-      'core-js/stable',
-      'regenerator-runtime/runtime',
 
       '@babel/runtime-corejs3/core-js/array/from.js',
       '@babel/runtime-corejs3/core-js/date/now.js',

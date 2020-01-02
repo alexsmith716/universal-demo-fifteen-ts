@@ -21,7 +21,7 @@
     "test": "jest src",
     "check-types-t": "tsc --traceResolution",
     "check-types-w": "tsc --watch",
-    "check-types": "tsc --noEmit false"
+    "check-types": "tsc --noEmit true"
   },
   "dependencies": {
     "@babel/register": "^7.7.7",

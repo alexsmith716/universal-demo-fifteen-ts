@@ -76,7 +76,9 @@ function startingTask() {
 }
 
 // Generators are async functions that can be paused and started while keeping context
-// A function is a generator if it contains one or more 'yield' expressions and if it uses the 'function*' syntax
+// A function is a generator if it contains one or more 'yield' expressions and 
+//  if it uses the 'function*'               syntax
+//  if it uses the 'async *someFunction()'  syntax
 export function* promiseGenerator() {
   // function is paused by executing a 'yield' keyword
   // function 'startingTask' is momentarily 'paused/setTimeout()' by the 3 above 'interruptingTasks'

@@ -1,5 +1,11 @@
 # universal-demo-fifteen-ts
 
+1/2 ran 'DuplicatesPlugin' none identified
+
+https://github.com/facebook/react/issues/2402
+https://github.com/facebook/react/issues/13991
+https://webpack.js.org/configuration/resolve/#resolvealias
+
 https://webpack.js.org/configuration/target/
 https://webpack.js.org/concepts/targets/
 
