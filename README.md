@@ -2,6 +2,10 @@
 
 1/2 ran 'DuplicatesPlugin' none identified
 
+check for duplicate 'react' in dependency tree: `npm ls react`
+
+https://reactjs.org/warnings/invalid-hook-call-warning.htmls
+https://github.com/facebook/react/issues/14257
 https://github.com/facebook/react/issues/2402
 https://github.com/facebook/react/issues/13991
 https://webpack.js.org/configuration/resolve/#resolvealias
