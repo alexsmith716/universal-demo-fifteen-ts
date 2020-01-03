@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useInterval } from '../custom/useInterval';
 
-import useTimeElapsed from '../../../../hooks/useTimeElapsed';
+import { useInterval } from '../../../../hooks/useInterval';
+import { useTimeElapsed } from '../../../../hooks/useTimeElapsed';
+// import { useTimeElapsed } from '~hooks/useTimeElapsed';
 
 // making setInterval declarative with react hooks
 

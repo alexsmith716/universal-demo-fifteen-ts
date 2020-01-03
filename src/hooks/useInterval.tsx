@@ -19,9 +19,7 @@ import { useEffect, useRef } from 'react';
 //   notSure?: any;
 // }
 
-// export const useInterval = function({ callback, delay, notSure }: useIntervalProps) {
-// export const useInterval = (callback: any, delay: number, notSure?: any) => {
-export const useInterval = function(callback: any, delay: number, notSure?: any) {
+export function useInterval(callback: any, delay: number, notSure?: any) {
 
   // If `notSure` isn't given in `Props` object, it defaults to `any`
 
@@ -57,11 +55,3 @@ export const useInterval = function(callback: any, delay: number, notSure?: any)
 
   }, [delay]);
 }
-// 00
-// 11
-// 22 +++++
-// 44 +++++
-
-// 33
-// 00
-// 11

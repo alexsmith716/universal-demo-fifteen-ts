@@ -6,7 +6,7 @@ interface UseTimeElapsedReturn {
   date: any;
 }
 
-function useTimeElapsed(init: any): UseTimeElapsedReturn {
+export function useTimeElapsed(init: any): UseTimeElapsedReturn {
 
   const [ date ] = useState(init);
 
@@ -14,10 +14,5 @@ function useTimeElapsed(init: any): UseTimeElapsedReturn {
 
   // -------------------------------------
 
-  return {
-    date,
-  };
-
+  return { date };
 }
-
-export default useTimeElapsed;

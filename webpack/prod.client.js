@@ -62,7 +62,8 @@ module.exports = {
         options: {
           babelrc: false,
           configFile: path.resolve(rootPath, 'babel.config.client.js'),
-          // cacheDirectory: true
+          // cacheDirectory: true,
+          // cacheCompression: false,
         },
       },
       {
@@ -255,8 +256,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.css', '.scss'],
     alias: {
-      react: path.resolve('./node_modules/react'), // https://github.com/facebook/react/issues/13991 (duplicate react's in dependency tree)
-      // '~hooks': path.resolve(__dirname, '../src/hooks'),
+      react: path.resolve('./node_modules/react'), // https://github.com/facebook/react/issues/13991 (duplicate react in dependency tree)
+      // '~hooks': path.resolve(rootPath, './src/hooks'),
     }
   },
 
