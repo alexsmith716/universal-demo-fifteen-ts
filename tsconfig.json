@@ -21,10 +21,14 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": false
+    "suppressImplicitAnyIndexErrors": false,
+    // "baseUrl": "./src",
+    // "paths": {
+    //   "~hooks/*": ["./hooks/*"]
+    // }
   },
   "include": [
-    "src/**/*"
+    "src"
   ],
   "exclude": [
     "build"
