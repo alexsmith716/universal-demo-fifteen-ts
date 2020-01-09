@@ -2,6 +2,19 @@ import { useEffect, useRef } from 'react';
 
 // making setInterval declarative with react hooks
 
+// tell/delegate DOM what you need/like: declarative (react)
+// tell DOM what/how/should to do:     imperative
+// --------------------------------------------------
+// making setInterval declarative with react hooks
+// setting up a interval to change the DOM in React
+// "useEffect" Hook IS: "componentDidMount", "componentDidUpdate", "componentWillUnmount" combined
+// "useRef": 
+//    returns a mutable ref object 
+//      whose ".current" property is initialized to the passed argument (initialValue). 
+//    The returned object will persist for lifetime of the component.
+//    common use case is to access a child imperatively
+
+
 // https://reactjs.org/docs/refs-and-the-dom.html
 
 // CUSTOM HOOK: extract component logic into reusable functions

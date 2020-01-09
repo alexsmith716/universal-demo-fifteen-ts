@@ -54,10 +54,10 @@ export const ClockHooks = ({ TODO_TYPEME }: ClockHooksProps) => {
 
     return (
       <>
-        {t}
-        <button onClick={handleButtonClick}>
+        <div>{t}</div>
+        <div><button onClick={handleButtonClick}>
           Clear Time Interval
-        </button>
+        </button></div>
       </>
     );
   }

@@ -1,5 +1,18 @@
 # universal-demo-fifteen-ts
 
+## Rules of Hooks
+
+* Only Call Hooks at the Top Level
+* Only Call Hooks from React function components
+* Only Call Hooks from custom Hooks
+
+With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. 
+Hooks allow you to reuse stateful logic without changing your component hierarchy. 
+This makes it easy to share Hooks among many components or with the community.
+
+=============================================================
+=============================================================
+
 1/2 ran 'DuplicatesPlugin' none identified
 
 check for duplicate 'react' in dependency tree: `npm ls react`

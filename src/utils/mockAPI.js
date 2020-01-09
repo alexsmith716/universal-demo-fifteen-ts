@@ -72,6 +72,10 @@ function startResolvedPromise(delay) {
   });
 }
 
+// =========================================================================
+// =========================================================================
+// =========================================================================
+
 function startResolvedRejectedPromise(v, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -130,6 +134,10 @@ function postRequestConcatResolveRejectPromise(dataObj, r, delay) {
   console.log('###### mockAPI > postRequestConcatResolveRejectPromise(1600) PPPPPPPP: ', promise);
   return promise;
 };
+
+// =========================================================================
+// =========================================================================
+// =========================================================================
 
 // promise.all: rejects with reason of 1st promise that rejects
 // async always return a promise
@@ -235,8 +243,8 @@ export async function getSomeAsyncDataDemo2(location) {
   timeElapsedClass1.setStartTime();
   timeElapsedModule1.setStartTime();
   
-  console.log(`###### mockAPI > getSomeAsyncData > timeElapsedClass1.getStartTime(): ${timeElapsedClass1.getStartTime()}`);
-  console.log('###### mockAPI > getSomeAsyncData > timeElapsedModule1.getStartTime(): ', timeElapsedModule1.getStartTime());
+  console.log(`###### mockAPI > getSomeAsyncDataDemo2 > timeElapsedClass1.getStartTime(): ${timeElapsedClass1.getStartTime()}`);
+  console.log('###### mockAPI > getSomeAsyncDataDemo2 > timeElapsedModule1.getStartTime(): ', timeElapsedModule1.getStartTime());
 
   // --------------------------
 
@@ -253,17 +261,17 @@ export async function getSomeAsyncDataDemo2(location) {
 
   // --------------------------
 
-  console.log(`###### mockAPI > getSomeAsyncData > timeElapsedClass1.getSecondsElapsed(): ${timeElapsedClass1.getSecondsElapsed()}`);
-  console.log('###### mockAPI > getSomeAsyncData > timeElapsedModule1.getSecondsElapsed(): ', timeElapsedModule1.getSecondsElapsed());
+  console.log(`###### mockAPI > getSomeAsyncDataDemo2 > timeElapsedClass1.getSecondsElapsed(): ${timeElapsedClass1.getSecondsElapsed()}`);
+  console.log('###### mockAPI > getSomeAsyncDataDemo2 > timeElapsedModule1.getSecondsElapsed(): ', timeElapsedModule1.getSecondsElapsed());
 
   try {
     // 10.8
     const k = await startResolvedRejectedPromise('foober', 1200);
-    console.log('###### mockAPI > getSomeAsyncData > startResolvedRejectedPromise(1200) k: ', k);
+    console.log('###### mockAPI > getSomeAsyncDataDemo2 > startResolvedRejectedPromise(1200) k: ', k);
     return k;
 
   } catch (error) {
-    console.log('###### mockAPI > getSomeAsyncData > k > catch > error: ', error);
+    console.log('###### mockAPI > getSomeAsyncDataDemo2 > k > catch > error: ', error);
     return error;
   }
 
@@ -272,13 +280,30 @@ export async function getSomeAsyncDataDemo2(location) {
   //   const e = await awaitForReturnValueOfAFunction(response.data);
   //   return e;
   // } catch (error) {
-  //   console.log('###### mockAPI > getSomeAsyncData() > catch > error: ', error);
+  //   console.log('###### mockAPI > getSomeAsyncDataDemo2() > catch > error: ', error);
   //   return error;
   // }
 }
 
 // =========================================================================
 // =========================================================================
+// =========================================================================
+
+export async function postRequestConcatExportSYNC(req) {
+
+  console.log('###### mockAPI > postRequestConcatExportSYNC > req: ', req);
+
+  timeElapsedModule1.setStartTime();
+
+  // resolved promise object returned
+  let promise = await postRequestConcatResolveRejectPromise(req, 'resolve', 1600);
+  console.log('###### mockAPI > postRequestConcatExportSYNC > postRequestConcatResolveRejectPromise(1600) PROMISE: ', promise);
+
+  // return await promise;
+  return promise;
+}
+
+// ------------------------------------------------------------------------
 
 export async function getSomeAsyncData(location) {
 
@@ -347,22 +372,6 @@ export function postRequestConcatExportASYNC(req) {
 
   return thenProm;
   // return promise;
-}
-
-// ------------------------------------------------------------------------
-
-export async function postRequestConcatExportSYNC(req) {
-
-  console.log('###### mockAPI > postRequestConcatExportSYNC > req: ', req);
-
-  timeElapsedModule1.setStartTime();
-
-  // resolved promise object returned
-  let promise = await postRequestConcatResolveRejectPromise(req, 'resolve', 1600);
-  console.log('###### mockAPI > postRequestConcatExportSYNC > postRequestConcatResolveRejectPromise(1600) PROMISE: ', promise);
-
-  // return await promise;
-  return promise;
 }
 
 // ------------------------------------------------------------------------
