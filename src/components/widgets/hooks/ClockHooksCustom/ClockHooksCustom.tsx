@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { useIntervalJS } from '../../../../hooks/useIntervalJS';
+import { useTimeElapsedHook } from '../../../../hooks/useTimeElapsedHook';
 
 // making setInterval declarative with react hooks
 
@@ -13,6 +14,8 @@ export const ClockHooksCustom = () => {
   useIntervalJS( () => { setCountB(countB + 1); } , 2000);
 
   const [clickedCount, setClickedCount] = useState(0);
+
+  const { startTime, setTheStartTime, startTimeElapsed, pauseTimeElapsed } = useTimeElapsedHook(Date.now(), null);
 
   return (
     <>
@@ -32,6 +35,25 @@ export const ClockHooksCustom = () => {
       </div>
       <div>-----------------------------------</div>
       <div>-----------------------------------</div>
+
+      <div>Start Time: {startTime}</div>
+      <div>
+        <button onClick={setTheStartTime}>
+          Set Start Time ('Date()' in milliseconds)
+        </button>
+      </div>
+      <div>-----------------------------------</div>
+      <div>
+        <button onClick={startTimeElapsed}>
+          Start Time Elapsed (interval delay 1ms)
+        </button>
+      </div>
+       <div>-----------------------------------</div>
+      <div>
+        <button onClick={pauseTimeElapsed}>
+          Pause Time Elapsed
+        </button>
+      </div>
     </>
   );
 }
