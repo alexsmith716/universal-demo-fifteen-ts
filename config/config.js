@@ -10,6 +10,7 @@ const environment = {
 }[process.env.NODE_ENV || 'development'];
 
 const config = {
+  faviconPath: `http://${process.env.HOST || 'localhost'}:${+process.env.PORT || 3000}/favicon.ico`,
   mongoDBmongooseURL: 'mongodb://localhost:27017/apptest2018',
   mongoDBsessionURL: 'mongodb://localhost:27017/apptest2018s',
   mongoLabURL: 'mongodb://localhost/apptest2018mlab',

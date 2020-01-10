@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import config from '../../config/config';
 
 function Html({ assets, content, store }) {
   return (
@@ -9,7 +10,7 @@ function Html({ assets, content, store }) {
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
 
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href={config.faviconPath} type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
 
         <meta name="mobile-web-app-capable" content="yes" />

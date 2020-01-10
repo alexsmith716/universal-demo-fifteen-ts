@@ -1,5 +1,8 @@
 # universal-demo-fifteen-ts
 
+sass-loader
+terser-webpack-plugin
+
 ## Rules of Hooks
 
 * Only Call Hooks at the Top Level

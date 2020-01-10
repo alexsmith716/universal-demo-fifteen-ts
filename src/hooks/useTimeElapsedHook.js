@@ -16,6 +16,10 @@ export function useTimeElapsedHook(initStartTime, initStartDelay) {
     setStartTime(Date.now());
   }
 
+  // function getTheStartTime() {
+  //   setStartTime(Date.now());
+  // }
+
   function startTimeElapsed() {
     setIntervalDelay(1);
   }
