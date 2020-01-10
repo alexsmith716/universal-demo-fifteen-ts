@@ -5,7 +5,6 @@ const express = require("express");
 const compression = require("compression");
 const http = require("http");
 const morgan = require("morgan");
-const favicon = require("serve-favicon");
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
@@ -53,7 +52,6 @@ const server = http.createServer(app);
 app.set("port", port);
 app.use(morgan("dev"));
 app.use(compression());
-app.use(favicon(path.join(__dirname, "..", "build", "favicon.ico")));
 
 app.use((req, res, next) => {
   console.log(">>>>>>>>>>>>>>>>> START > REQUEST IN <<<<<<<<<<<<<<<<<<<<<<<");

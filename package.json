@@ -70,7 +70,6 @@
     "redux-persist": "^6.0.0",
     "redux-persist-cookie-storage": "^1.0.0",
     "serialize-javascript": "^2.1.2",
-    "serve-favicon": "^2.5.0",
     "webpack-flush-chunks": "^2.0.3"
   },
   "devDependencies": {
