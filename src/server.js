@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { Router, StaticRouter } from 'react-router';
 import { createMemoryHistory } from 'history';
 import { renderRoutes } from 'react-router-config';
-import { getStoredState } from 'redux-persist'; 
 import { CookieStorage, NodeCookiesWrapper } from 'redux-persist-cookie-storage'; 
 import { trigger } from 'redial';
 
