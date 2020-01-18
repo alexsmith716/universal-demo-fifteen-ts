@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { provideHooks } from 'redial';
 
-import { ClockHooksCustom } from '../../components';
-import { ClockHooks } from '../../components';
+// import { ClockHooksCustomJS } from '../../components';
+// import { ClockHooksCustomQ } from '../../components';
+// import { ClockHooks } from '../../components';
+// import { Todo } from '../../components';
 
 import CatsForm from '../../components/widgets/CatsForm/CatsForm';
 import Clock from '../../components/widgets/Clock/Clock';
@@ -72,96 +74,29 @@ class AboutOne extends Component {
             <div className="card h-100">
 
               <h2 className="card-header text-center font-tester-font2">
-                Clock Hooks!
+                Thinking in React!
               </h2>
 
               <div className="card-body">
 
                 <h5 className="card-title text-center">
-                  Making 'setInterval' Declarative
+                  Most Basic CounterPreloaded 1
                 </h5>
 
                 <div className="basic-outer-box padding-two-border-radius-six">
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    <div className="row justify-content-center">
-                      <div className="col-md-auto">
-
-                        <div className="d-flex bg-color-ivory container-padding-border-radius-2">
-
-                          <div className="width-400 text-center">
-
-                            <div className="row">
-
-                              <div className="col">
-                                <ClockHooksCustom />
-                              </div>
-
-                            </div>
-
-                          </div>
+                    <div className="row no-gutters justify-content-center">
+                      <div className="col bg-color-ivory flex-width-400">
+                        <div className="my-1 container-padding-border-radius-2 text-break">
+                          <CounterPreloaded/>
                         </div>
-
                       </div>
                     </div>
 
                   </div>
-
                 </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
-
-        <div className="row">
-
-          <div className="col-lg-12 mb-4">
-
-            <div className="card h-100">
-
-              <h2 className="card-header text-center font-tester-font2">
-                Clock Hooks!
-              </h2>
-
-              <div className="card-body">
-
-                <h5 className="card-title text-center">
-                  React <i>Effect Hook</i> function component
-                </h5>
-
-                <div className="basic-outer-box padding-two-border-radius-six">
-
-                  <div className="basic-inner-box padding-five-border-radius-three">
-
-                    <div className="row justify-content-center">
-                      <div className="col-md-auto">
-
-                        <div className="d-flex bg-color-ivory container-padding-border-radius-2">
-
-                          <div className="width-400 text-center">
-
-                            <div className="row">
-
-                              <div className="col">
-                                <ClockHooks />
-                              </div>
-
-                            </div>
-
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
               </div>
             </div>
           </div>
@@ -182,14 +117,64 @@ class AboutOne extends Component {
               <div className="card-body">
 
                 <h5 className="card-title text-center">
-                  Most Basic CounterPreloaded 1
+                  Spacing Test 1
                 </h5>
 
                 <div className="basic-outer-box padding-two-border-radius-six">
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    <CounterPreloaded/>
+                    <div className="my-1 mx-1 p-1 container-padding-border-radius-2">
+
+                      <div className="my-1 mx-1 bg-color-ivory container-padding-border-radius-1 text-break">
+                        <div className="mb-2">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx!
+                        </div>
+                        <div className="row mx-md-n5">
+                          <div className="col px-md-5"><div className="p-3 border bg-light">Custom column padding</div></div>
+                          <div className="col px-md-5"><div className="p-3 border bg-light">Custom column padding</div></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+
+        <div className="row">
+
+          <div className="col-lg-12 mb-4">
+
+            <div className="card h-100">
+
+              <h2 className="card-header text-center font-tester-font2">
+                Thinking in React!
+              </h2>
+
+              <div className="card-body">
+
+                <h5 className="card-title text-center">
+                  Spacing Test 2
+                </h5>
+
+                <div className="basic-outer-box padding-two-border-radius-six">
+
+                  <div className="basic-inner-box padding-five-border-radius-three">
+
+                    <div className="my-1 mx-1 bg-color-ivory container-padding-border-radius-2 text-break">
+                      <div className="mb-2">
+                        Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx! Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?
+                      </div>
+                      <div className="row mx-md-n5">
+                        <div className="col px-md-5"><div className="p-3 border bg-light">Custom column padding</div></div>
+                        <div className="col px-md-5"><div className="p-3 border bg-light">Custom column padding</div></div>
+                      </div>
+                    </div>
 
                   </div>
 
@@ -222,12 +207,53 @@ class AboutOne extends Component {
 
                   <div className="basic-inner-box padding-five-border-radius-three">
 
-                    <CounterPreloaded/>
+                    <div className="row no-gutters justify-content-center">
+                      <div className="col bg-color-ivory flex-width-400">
+                        <div className="my-1 container-padding-border-radius-2 text-break">
+                          <CounterPreloaded/>
+                        </div>
+                      </div>
+                    </div>
 
                   </div>
-
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        {/* (>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>) */}
+
+        <div className="row">
+
+          <div className="col-lg-12 mb-4">
+
+            <div className="card h-100">
+
+              <h2 className="card-header text-center font-tester-font2">
+                Thinking in React!
+              </h2>
+
+              <div className="card-body">
+
+                <h5 className="card-title text-center">
+                  Most Basic CounterPreloaded 3
+                </h5>
+
+                <div className="basic-outer-box padding-two-border-radius-six">
+
+                  <div className="basic-inner-box padding-five-border-radius-three">
+
+                    <div className="row no-gutters justify-content-center">
+                      <div className="col bg-color-ivory flex-width-400">
+                        <div className="my-1 container-padding-border-radius-2 text-break">
+                          <CounterPreloaded/>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -124,6 +124,11 @@ hr.light {
   font-size: 90%;
 }
 
+.flex-width-400 {
+  -ms-flex: 0 0 400px;
+  flex: 0 0 400px;
+} 
+
 .width-100 {
   width: calculate-rem(100px);
 }
